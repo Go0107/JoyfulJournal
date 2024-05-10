@@ -13,3 +13,7 @@
 
 * 時差投稿ボタンを押す → 以前投稿できなかった日の投稿をできる
 ## 画面遷移図
+https://www.figma.com/design/oslG8QuctbXG5c01WIfMHa/オリプロ%E3%80%80画面遷移図?node-id=0-1&t=tSqyitwRLtuNUNyd-0
+## ワイヤーフレーム
+## テーブル定義書
+## システム構成図
