@@ -17,4 +17,11 @@ https://www.figma.com/design/oslG8QuctbXG5c01WIfMHa/オリプロ%E3%80%80画面�
 ## ワイヤーフレーム
 https://www.figma.com/design/pYyMoOUk6togTRpK8RdOpw/ワイヤーフレーム?node-id=0-1&t=D9JhOLmIBpE5phgc-0
 ## テーブル定義書
+users
+|項目名|データ型|初期値|必須|主キー|
+|:--|:--|:--|:--|:--|
+|id|INT||TRUE|TRUE|
+|name|VARCHAR||TRUE||
+|created_at|TIMESTANP|CURRENT_TIMESTAMP|TRUE||
+|updated_at|TIMESTANP|CURRENT_TIMESTAMP|TRUE||
 ## システム構成図
