@@ -15,5 +15,6 @@
 ## 画面遷移図
 https://www.figma.com/design/oslG8QuctbXG5c01WIfMHa/オリプロ%E3%80%80画面遷移図?node-id=0-1&t=tSqyitwRLtuNUNyd-0
 ## ワイヤーフレーム
+https://www.figma.com/design/pYyMoOUk6togTRpK8RdOpw/ワイヤーフレーム?node-id=0-1&t=D9JhOLmIBpE5phgc-0
 ## テーブル定義書
 ## システム構成図
