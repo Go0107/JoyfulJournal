@@ -27,14 +27,14 @@ https://www.figma.com/design/pYyMoOUk6togTRpK8RdOpw/ワイヤーフレーム?nod
 |name|VARCHAR||TRUE||
 |email|VARCHAR||TRUE||
 |password|VARCHAR||TRUE||
-|created_at|TIMESTANP|CURRENT_TIMESTAMP|TRUE||
-|updated_at|TIMESTANP|CURRENT_TIMESTAMP|TRUE||
+|created_at|TIMESTAMP|CURRENT_TIMESTAMP|TRUE||
+|updated_at|TIMESTAMP|CURRENT_TIMESTAMP|TRUE||
 ### journals
 |項目名|データ型|初期値|必須|主キー|
 |:--|:--|:--|:--|:--|
 |id|BIGINT||TRUE|TRUE|
 |content|VARCHAR||||
-|stanp|VARCHAR||TRUE||
-|created_at|TIMESTANP|CURRENT_TIMESTAMP|TRUE||
-|updated_at|TIMESTANP|CURRENT_TIMESTAMP|TRUE||
+|stamp|VARCHAR||TRUE||
+|created_at|TIMESTAMP|CURRENT_TIMESTAMP|TRUE||
+|updated_at|TIMESTAMP|CURRENT_TIMESTAMP|TRUE||
 ## システム構成図
