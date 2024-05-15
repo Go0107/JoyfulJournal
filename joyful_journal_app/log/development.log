@@ -257,3 +257,13 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 464ms (Views: 368.0ms | ActiveRecord: 2.7ms | Allocations: 14631)
 
 
+Started GET "/" for ::1 at 2024-05-15 23:12:12 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 327.8ms | Allocations: 33610)
+Completed 200 OK in 471ms (Views: 359.8ms | ActiveRecord: 0.0ms | Allocations: 38431)
+
+
