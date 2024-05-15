@@ -185,3 +185,75 @@ Processing by TopsController#index as HTML
 Completed 200 OK in 41ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 2708)
 
 
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20240515140045)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240515140045"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (4.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-05-15 14:01:11.943854"], ["updated_at", "2024-05-15 14:01:11.943854"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/rails/info/routes" for ::1 at 2024-05-15 23:01:27 +0900
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x000001ecfc167db8 @set=#<ActionDispatch::Routing::RouteSet:0x000001ecf7ac4618>, @draw_paths=[#<Pathname:C:/Users/srfiv/JoyfulJournal/joyful_journal_app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x000001ecfbc813a8 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x000001ecfb5248a8 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-05-15 23:01:46 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2024-05-15 23:03:39 +0900
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x000001ecfc16fe28 @set=#<ActionDispatch::Routing::RouteSet:0x000001ecf7ac4618>, @draw_paths=[#<Pathname:C:/Users/srfiv/JoyfulJournal/joyful_journal_app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x000001ecfca58440 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x000001ecfb5248a8 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-05-15 23:06:38 +0900
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x000001ecfc160158 @set=#<ActionDispatch::Routing::RouteSet:0x000001ecf7ac4618>, @draw_paths=[#<Pathname:C:/Users/srfiv/JoyfulJournal/joyful_journal_app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x000001ecfcb9a4c0 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x000001ecfb5248a8 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-05-15 23:09:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 35.8ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 1619.1ms | Allocations: 33520)
+Completed 200 OK in 1979ms (Views: 1741.9ms | ActiveRecord: 0.0ms | Allocations: 38816)
+
+
+Started GET "/rails/info/routes" for ::1 at 2024-05-15 23:09:40 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/layouts/application.html.erb
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [46 times] (Duration: 37.0ms | Allocations: 7510)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 17.1ms | Allocations: 1203)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 94.9ms | Allocations: 13212)
+  Rendered layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/layouts/application.html.erb (Duration: 121.0ms | Allocations: 13489)
+Completed 200 OK in 154ms (Views: 135.4ms | ActiveRecord: 0.0ms | Allocations: 14403)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-15 23:10:02 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.2ms | Allocations: 716)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 303.6ms | Allocations: 4979)
+  Rendered layout layouts/application.html.erb (Duration: 324.2ms | Allocations: 6638)
+Completed 200 OK in 464ms (Views: 368.0ms | ActiveRecord: 2.7ms | Allocations: 14631)
+
+
