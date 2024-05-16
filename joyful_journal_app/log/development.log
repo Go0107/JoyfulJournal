@@ -416,3 +416,360 @@ Migrating to CreateJournals (20240515210446)
   [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-05-16 22:12:57 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 810.6ms | Allocations: 33463)
+Completed 200 OK in 1109ms (Views: 884.1ms | ActiveRecord: 0.0ms | Allocations: 38299)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-16 22:13:03 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 12.4ms | Allocations: 243)
+  Rendered devise/shared/_links.html.erb (Duration: 75.5ms | Allocations: 603)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 239.0ms | Allocations: 4070)
+  Rendered layout layouts/application.html.erb (Duration: 247.7ms | Allocations: 5493)
+Completed 200 OK in 302ms (Views: 266.5ms | ActiveRecord: 0.7ms | Allocations: 12638)
+
+
+Started GET "/" for ::1 at 2024-05-16 22:14:46 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 1936)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 2784)
+
+
+Started GET "/journals/index" for ::1 at 2024-05-16 22:14:51 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1724)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 2413)
+
+
+Started GET "/journals/index" for ::1 at 2024-05-16 22:18:47 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 1949)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 2803)
+
+
+Started GET "/journals/index" for ::1 at 2024-05-16 22:19:20 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 1944)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+Started GET "/" for ::1 at 2024-05-16 22:19:22 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1691)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 2298)
+
+
+Started GET "/" for ::1 at 2024-05-16 22:19:30 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1915)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 2763)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-16 22:19:33 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+Started GET "/users/sign_up" for ::1 at 2024-05-16 22:19:33 +0900
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 718)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 69.5ms | Allocations: 3150)
+  Rendered layout layouts/application.html.erb (Duration: 84.5ms | Allocations: 4589)
+Completed 200 OK in 124ms (Views: 99.2ms | ActiveRecord: 0.0ms | Allocations: 6050)
+
+
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3308)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 4186)
+
+
+Started GET "/journals/index" for ::1 at 2024-05-16 22:19:33 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 1701)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 2308)
+
+
+Started GET "/" for ::1 at 2024-05-16 22:19:34 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1526)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 1814)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-16 22:19:35 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 2542)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 3104)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-16 22:19:37 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2553)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 3166)
+
+
+Started GET "/users/password/new" for ::1 at 2024-05-16 22:19:38 +0900
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 147)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 2616)
+Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 3672)
+
+
+Started GET "/rails/info/routes" for ::1 at 2024-05-16 22:24:48 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/layouts/application.html.erb
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [55 times] (Duration: 32.6ms | Allocations: 8844)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 77.1ms | Allocations: 1042)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 136.2ms | Allocations: 15045)
+  Rendered layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/layouts/application.html.erb (Duration: 154.1ms | Allocations: 15321)
+Completed 200 OK in 167ms (Views: 160.3ms | ActiveRecord: 0.0ms | Allocations: 16295)
+
+
+Started GET "/rails/info/routes" for ::1 at 2024-05-16 22:25:08 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/layouts/application.html.erb
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [54 times] (Duration: 7.7ms | Allocations: 8485)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.8ms | Allocations: 884)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 17.0ms | Allocations: 14339)
+  Rendered layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8.1/lib/rails/templates/layouts/application.html.erb (Duration: 19.2ms | Allocations: 14610)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 15402)
+
+
+Started GET "/journals/index" for ::1 at 2024-05-16 22:25:23 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for JournalsController):
+  
+actionpack (7.0.8.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.9) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.9) lib/rack/etag.rb:27:in `call'
+rack (2.2.9) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.9) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.9) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.9) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8.1) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-05-16 22:25:25 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 15377)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.0ms | Allocations: 16253)
+
+
+Started GET "/" for ::1 at 2024-05-16 22:25:47 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 1931)
+Completed 200 OK in 35ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 2779)
+
+
+Started GET "/journals" for ::1 at 2024-05-16 22:25:50 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1695)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 2381)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-16 22:26:27 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 1615)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 1955)
+
+
+Started GET "/" for ::1 at 2024-05-16 22:27:32 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 1926)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 2774)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-16 22:27:33 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1687)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 2293)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-17 04:40:56 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 1530)
+Completed 200 OK in 42ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 1817)
+
+
+Started GET "/journals" for ::1 at 2024-05-17 04:42:56 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 1666)
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 2022)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-17 04:42:57 +0900
+Started GET "/users/sign_in" for ::1 at 2024-05-17 04:42:57 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.6ms | Allocations: 588)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2190)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3666)
+Completed 200 OK in 47ms (Views: 33.8ms | ActiveRecord: 1.3ms | Allocations: 7036)
+
+
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 99)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1922)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 3343)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 4418)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-17 04:42:59 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2542)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3104)
+
+
+Started POST "/users" for ::1 at 2024-05-17 04:43:18 +0900
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@test.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-16 19:43:19.558308"], ["updated_at", "2024-05-16 19:43:19.558308"]]
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 876ms (ActiveRecord: 23.8ms | Allocations: 11015)
+
+
+Started GET "/" for ::1 at 2024-05-17 04:43:19 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 1585)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 1915)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
