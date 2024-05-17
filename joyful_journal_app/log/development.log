@@ -1048,3 +1048,321 @@ ActionView::Template::Error (undefined method `name' for #<User id: nil, email: 
   
 app/views/devise/registrations/new.html.erb:8
 app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2024-05-17 05:07:42 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 248)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 596)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 114.0ms | Allocations: 4716)
+  Rendered layout layouts/application.html.erb (Duration: 267.7ms | Allocations: 37647)
+Completed 200 OK in 623ms (Views: 533.5ms | ActiveRecord: 0.9ms | Allocations: 49765)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:07:50 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 1919)
+Completed 200 OK in 63ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 2670)
+
+
+Started DELETE "/users/sign_out?_method=delete" for ::1 at 2024-05-17 05:07:52 +0900
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 303 See Other in 5ms (ActiveRecord: 0.0ms | Allocations: 697)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:07:52 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 1704)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 2033)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-17 05:07:55 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1408)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 2795)
+Completed 200 OK in 41ms (Views: 31.0ms | ActiveRecord: 0.0ms | Allocations: 3390)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-17 05:07:57 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 2809)
+Completed 200 OK in 44ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 3416)
+
+
+Started POST "/users" for ::1 at 2024-05-17 05:08:26 +0900
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"test太郎", "email"=>"testtarou@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testtarou@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (22.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "testtarou@test.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-16 20:08:28.191650"], ["updated_at", "2024-05-16 20:08:28.191650"], ["name", "test太郎"]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 1493ms (ActiveRecord: 36.9ms | Allocations: 18790)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:08:28 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 78)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 2625)
+Completed 200 OK in 50ms (Views: 38.2ms | ActiveRecord: 0.6ms | Allocations: 2912)
+
+
+Started DELETE "/users/sign_out?_method=delete" for ::1 at 2024-05-17 05:08:38 +0900
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 43ms (ActiveRecord: 0.6ms | Allocations: 2362)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:08:38 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 1692)
+Completed 200 OK in 32ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 1979)
+
+
+Started DELETE "/users/sign_out?_method=delete" for ::1 at 2024-05-17 05:40:00 +0900
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 303 See Other in 4ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:40:00 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 1673)
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 1960)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-17 05:40:01 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1411)
+Started GET "/users/sign_in" for ::1 at 2024-05-17 05:40:02 +0900
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 3142)
+Completed 200 OK in 71ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 3747)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 262)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 456.5ms | Allocations: 11306)
+  Rendered layout layouts/application.html.erb (Duration: 471.7ms | Allocations: 12763)
+Completed 200 OK in 520ms (Views: 508.4ms | ActiveRecord: 0.0ms | Allocations: 13893)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-05-17 05:40:19 +0900
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"testtarou@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testtarou@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 913ms (ActiveRecord: 1.7ms | Allocations: 3102)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:40:20 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 78)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 2410)
+Completed 200 OK in 40ms (Views: 30.7ms | ActiveRecord: 0.7ms | Allocations: 2698)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-17 05:44:56 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 30ms (ActiveRecord: 0.7ms | Allocations: 1459)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:44:56 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 78)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 2428)
+Completed 200 OK in 37ms (Views: 26.8ms | ActiveRecord: 1.0ms | Allocations: 2739)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-17 05:44:57 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms | Allocations: 1473)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:44:57 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 78)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 2365)
+Completed 200 OK in 33ms (Views: 25.0ms | ActiveRecord: 0.4ms | Allocations: 2651)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-17 05:45:00 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 1444)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:45:00 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 78)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 2373)
+Completed 200 OK in 36ms (Views: 26.1ms | ActiveRecord: 0.6ms | Allocations: 2659)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-17 05:45:01 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 1462)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:45:01 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 78)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 2368)
+Completed 200 OK in 30ms (Views: 21.7ms | ActiveRecord: 0.5ms | Allocations: 2654)
+
+
+Started DELETE "/users/sign_out?_method=delete" for ::1 at 2024-05-17 05:45:05 +0900
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 19ms (ActiveRecord: 0.7ms | Allocations: 1768)
+
+
+Started GET "/" for ::1 at 2024-05-17 05:45:05 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 1659)
+Completed 200 OK in 31ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 1946)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-17 05:45:06 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 2596)
+Completed 200 OK in 32ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 3269)
+
+
+Started GET "/journals" for ::1 at 2024-05-17 05:45:14 +0900
+Started GET "/journals/new" for ::1 at 2024-05-17 05:45:14 +0900
+Processing by JournalsController#index as HTML
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 247)
+  Rendered journals/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 2667)
+Completed 200 OK in 67ms (Views: 46.6ms | ActiveRecord: 0.0ms | Allocations: 3763)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 3876)
+Completed 200 OK in 76ms (Views: 58.4ms | ActiveRecord: 0.0ms | Allocations: 4893)
+
+
+Started GET "/journals" for ::1 at 2024-05-17 05:45:17 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 1587)
+Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 1873)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-17 05:48:31 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+Started GET "/journals" for ::1 at 2024-05-17 05:48:31 +0900
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 1945)
+Completed 200 OK in 58ms (Views: 48.9ms | ActiveRecord: 0.0ms | Allocations: 2260)
+
+
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 1603)
+Completed 200 OK in 30ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 1889)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-17 05:48:34 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 1593)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 1879)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-17 05:49:16 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 2067)
+Completed 200 OK in 53ms (Views: 47.0ms | ActiveRecord: 0.0ms | Allocations: 2916)
+
+
