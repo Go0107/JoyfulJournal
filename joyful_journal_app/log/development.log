@@ -1366,3 +1366,311 @@ Processing by JournalsController#new as HTML
 Completed 200 OK in 53ms (Views: 47.0ms | ActiveRecord: 0.0ms | Allocations: 2916)
 
 
+Started GET "/" for ::1 at 2024-05-17 21:18:57 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 64.4ms | Allocations: 573)
+  Rendered layout layouts/application.html.erb (Duration: 1662.1ms | Allocations: 33923)
+Completed 200 OK in 2320ms (Views: 1782.3ms | ActiveRecord: 0.0ms | Allocations: 39699)
+
+
+Started GET "/journals" for ::1 at 2024-05-17 21:47:17 +0900
+Started GET "/users/sign_up" for ::1 at 2024-05-17 21:47:18 +0900
+Processing by Devise::RegistrationsController#new as HTML
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 311)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 2937)
+Completed 200 OK in 123ms (Views: 52.7ms | ActiveRecord: 0.0ms | Allocations: 8415)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 34.2ms | Allocations: 244)
+  Rendered devise/shared/_links.html.erb (Duration: 155.2ms | Allocations: 590)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 522.6ms | Allocations: 4359)
+  Rendered layout layouts/application.html.erb (Duration: 540.2ms | Allocations: 5819)
+Completed 200 OK in 1106ms (Views: 589.0ms | ActiveRecord: 3.2ms | Allocations: 23163)
+
+
+Started GET "/journals" for ::1 at 2024-05-17 21:47:21 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 1601)
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 1890)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-17 22:07:52 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 262)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 114.3ms | Allocations: 2092)
+  Rendered layout layouts/application.html.erb (Duration: 134.3ms | Allocations: 3567)
+Completed 200 OK in 179ms (Views: 168.5ms | ActiveRecord: 0.0ms | Allocations: 4911)
+
+
+Started GET "/users/password/new" for ::1 at 2024-05-17 22:07:53 +0900
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 140)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 67.7ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 84.3ms | Allocations: 2646)
+Completed 200 OK in 126ms (Views: 105.2ms | ActiveRecord: 0.0ms | Allocations: 3841)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-05-17 22:08:09 +0900
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"testtarou@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testtarou@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 1016ms (ActiveRecord: 1.9ms | Allocations: 6053)
+
+
+Started GET "/" for ::1 at 2024-05-17 22:08:10 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 78)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 2453)
+Completed 200 OK in 53ms (Views: 45.1ms | ActiveRecord: 0.6ms | Allocations: 2781)
+
+
+Started DELETE "/users/sign_out?_method=delete" for ::1 at 2024-05-17 22:08:17 +0900
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 114ms (ActiveRecord: 0.5ms | Allocations: 2595)
+
+
+Started GET "/" for ::1 at 2024-05-17 22:08:17 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 1658)
+Completed 200 OK in 29ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 1945)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 02:55:02 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 1700)
+Completed 200 OK in 31ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 2043)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 02:55:02 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1581)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 1867)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-18 02:55:05 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1408)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2793)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 3409)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 02:55:07 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1578)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 1864)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 02:55:10 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 1590)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 1876)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 02:55:10 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1587)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 1873)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 02:55:16 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1584)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 1870)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 02:55:23 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 1590)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 1876)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 03:21:11 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 1592)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 1879)
+
+
+Started GET "/" for ::1 at 2024-05-18 03:21:12 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 1683)
+Completed 200 OK in 21ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 1969)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-18 03:21:13 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2794)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 3393)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 03:21:13 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1585)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 1871)
+
+
+Started GET "/" for ::1 at 2024-05-18 03:21:14 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1659)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1945)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 03:21:15 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 1593)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 1879)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 03:21:18 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1584)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 1870)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 03:21:20 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1585)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 1871)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 03:31:10 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 1593)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 1879)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 03:37:51 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1575)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 1861)
+
+
+Started GET "/" for ::1 at 2024-05-18 03:37:55 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1662)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 1948)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 03:37:56 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1585)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 1871)
+
+
+Started GET "/" for ::1 at 2024-05-18 03:37:57 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1653)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 1939)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 03:38:03 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1578)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 1864)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-18 03:38:06 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2792)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3394)
+
+
