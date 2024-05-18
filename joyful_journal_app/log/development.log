@@ -1674,3 +1674,539 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3394)
 
 
+Started GET "/" for ::1 at 2024-05-18 17:57:23 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 573)
+  Rendered layout layouts/application.html.erb (Duration: 690.0ms | Allocations: 33839)
+Completed 200 OK in 969ms (Views: 736.5ms | ActiveRecord: 0.0ms | Allocations: 39613)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-18 18:01:17 +0900
+Started GET "/journals" for ::1 at 2024-05-18 18:01:17 +0900
+Processing by Devise::SessionsController#new as HTML
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 1255)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 4093)
+Completed 200 OK in 197ms (Views: 110.0ms | ActiveRecord: 0.0ms | Allocations: 9733)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+Started GET "/journals" for ::1 at 2024-05-18 18:01:18 +0900
+  Rendered devise/shared/_links.html.erb (Duration: 161.5ms | Allocations: 1157)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 608.1ms | Allocations: 4875)
+  Rendered layout layouts/application.html.erb (Duration: 642.5ms | Allocations: 6379)
+Completed 200 OK in 936ms (Views: 699.1ms | ActiveRecord: 2.6ms | Allocations: 17890)
+
+
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 1587)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 1875)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-18 18:01:22 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 1674)
+Completed 200 OK in 51ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 2017)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-18 18:01:25 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 44.3ms | Allocations: 235)
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 149)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 67.9ms | Allocations: 2399)
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 3859)
+Completed 200 OK in 131ms (Views: 120.2ms | ActiveRecord: 0.0ms | Allocations: 5091)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-05-18 18:01:26 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 2596)
+Completed 200 OK in 45ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 3243)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-05-18 18:01:40 +0900
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"testtarou@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testtarou@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 1440ms (ActiveRecord: 3.3ms | Allocations: 5939)
+
+
+Started GET "/" for ::1 at 2024-05-18 18:01:42 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 78)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 2452)
+Completed 200 OK in 70ms (Views: 57.7ms | ActiveRecord: 0.9ms | Allocations: 2780)
+
+
+Started GET "/journals" for ::1 at 2024-05-18 18:02:15 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 2294)
+Completed 200 OK in 34ms (Views: 25.3ms | ActiveRecord: 0.4ms | Allocations: 2581)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:11:42 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 71.7ms | Allocations: 2455)
+Completed 200 OK in 84ms (Views: 72.5ms | ActiveRecord: 1.9ms | Allocations: 2741)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:11:43 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 2275)
+Completed 200 OK in 41ms (Views: 31.4ms | ActiveRecord: 0.4ms | Allocations: 2561)
+
+
+Started GET "/" for ::1 at 2024-05-19 02:13:45 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tops/index.html.erb:2
+  Rendered tops/index.html.erb within layouts/application (Duration: 34.6ms | Allocations: 1210)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | Allocations: 2939)
+Completed 200 OK in 62ms (Views: 54.2ms | ActiveRecord: 0.3ms | Allocations: 3787)
+
+
+Started DELETE "/users/sign_out?_method=delete" for ::1 at 2024-05-19 02:13:52 +0900
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 492ms (ActiveRecord: 0.4ms | Allocations: 10409)
+
+
+Started GET "/" for ::1 at 2024-05-19 02:13:53 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 232)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 1610)
+Completed 200 OK in 36ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 1936)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-05-19 02:19:24 +0900
+Processing by Devise::RegistrationsController#new as HTML
+Started GET "/users/sign_in" for ::1 at 2024-05-19 02:19:24 +0900
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 41.9ms | Allocations: 251)
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 146.9ms | Allocations: 2063)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 304.9ms | Allocations: 4288)
+  Rendered layout layouts/application.html.erb (Duration: 324.5ms | Allocations: 5758)
+Completed 200 OK in 401ms (Views: 391.2ms | ActiveRecord: 0.0ms | Allocations: 7226)
+
+
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 141)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 104.7ms | Allocations: 4102)
+  Rendered layout layouts/application.html.erb (Duration: 122.8ms | Allocations: 5557)
+Completed 200 OK in 168ms (Views: 154.7ms | ActiveRecord: 0.0ms | Allocations: 6643)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-05-19 02:19:36 +0900
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"testtarou@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testtarou@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 948ms (ActiveRecord: 1.9ms | Allocations: 2867)
+
+
+Started GET "/" for ::1 at 2024-05-19 02:19:37 +0900
+Processing by TopsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tops/index.html.erb:2
+  Rendered tops/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 2435)
+Completed 200 OK in 31ms (Views: 22.6ms | ActiveRecord: 0.5ms | Allocations: 2723)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:19:41 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 103)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 2462)
+Completed 200 OK in 72ms (Views: 59.2ms | ActiveRecord: 0.7ms | Allocations: 3069)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:30:39 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 522)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 121.2ms | Allocations: 18588)
+Completed 200 OK in 241ms (Views: 128.9ms | ActiveRecord: 2.3ms | Allocations: 23549)
+
+
+Started POST "/journals" for ::1 at 2024-05-19 02:31:30 +0900
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for JournalsController):
+  
+actionpack (7.0.8.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.9) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.9) lib/rack/etag.rb:27:in `call'
+rack (2.2.9) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.9) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.9) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.9) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8.1) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/journals/new" for ::1 at 2024-05-19 02:31:32 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 337)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 2440)
+Completed 200 OK in 37ms (Views: 26.4ms | ActiveRecord: 0.4ms | Allocations: 2754)
+
+
+  [1m[36mJournal Load (0.2ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToJournals (20240518173518)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "journals" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240518173518"]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/journals/new" for ::1 at 2024-05-19 02:41:40 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JournalsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journals_controller.rb:6:in `new'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mJournal Create (3.7ms)[0m  [1m[32mINSERT INTO "journals" ("content", "stamp", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", nil], ["stamp", nil], ["created_at", "2024-05-18 17:41:41.306619"], ["updated_at", "2024-05-18 17:41:41.306619"], ["user_id", 2]]
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+Redirected to http://localhost:3000/journals
+Completed 302 Found in 307ms (ActiveRecord: 20.1ms | Allocations: 18364)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:41:41 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 57.1ms | Allocations: 331)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 1606.6ms | Allocations: 34098)
+Completed 200 OK in 2196ms (Views: 1729.1ms | ActiveRecord: 0.5ms | Allocations: 37573)
+
+
+Started GET "/" for ::1 at 2024-05-19 02:41:47 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tops/index.html.erb:2
+  Rendered tops/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 2728)
+Completed 200 OK in 87ms (Views: 74.4ms | ActiveRecord: 0.4ms | Allocations: 3417)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:41:50 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 2305)
+Completed 200 OK in 43ms (Views: 32.3ms | ActiveRecord: 0.4ms | Allocations: 2593)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:41:50 +0900
+Processing by JournalsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journals_controller.rb:6:in `new'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mJournal Create (22.3ms)[0m  [1m[32mINSERT INTO "journals" ("content", "stamp", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", nil], ["stamp", nil], ["created_at", "2024-05-18 17:41:50.768314"], ["updated_at", "2024-05-18 17:41:50.768314"], ["user_id", 2]]
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+Redirected to http://localhost:3000/journals
+Completed 302 Found in 68ms (ActiveRecord: 34.4ms | Allocations: 2828)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:41:50 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 2296)
+Completed 200 OK in 37ms (Views: 28.4ms | ActiveRecord: 0.6ms | Allocations: 2582)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:41:54 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 2303)
+Completed 200 OK in 37ms (Views: 28.6ms | ActiveRecord: 0.5ms | Allocations: 2590)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:41:56 +0900
+Processing by JournalsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journals_controller.rb:6:in `new'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mJournal Create (24.6ms)[0m  [1m[32mINSERT INTO "journals" ("content", "stamp", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", nil], ["stamp", nil], ["created_at", "2024-05-18 17:41:56.586775"], ["updated_at", "2024-05-18 17:41:56.586775"], ["user_id", 2]]
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+Redirected to http://localhost:3000/journals
+Completed 302 Found in 73ms (ActiveRecord: 34.4ms | Allocations: 2792)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:41:56 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 2294)
+Completed 200 OK in 41ms (Views: 31.5ms | ActiveRecord: 0.8ms | Allocations: 2581)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:42:35 +0900
+Processing by JournalsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journals_controller.rb:6:in `new'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mJournal Create (20.6ms)[0m  [1m[32mINSERT INTO "journals" ("content", "stamp", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", nil], ["stamp", nil], ["created_at", "2024-05-18 17:42:35.329204"], ["updated_at", "2024-05-18 17:42:35.329204"], ["user_id", 2]]
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+Redirected to http://localhost:3000/journals
+Completed 302 Found in 55ms (ActiveRecord: 29.4ms | Allocations: 2858)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:42:35 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 2303)
+Completed 200 OK in 36ms (Views: 27.8ms | ActiveRecord: 0.5ms | Allocations: 2587)
+
+
+Started GET "/" for ::1 at 2024-05-19 02:42:37 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tops/index.html.erb:2
+  Rendered tops/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 994)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 2350)
+Completed 200 OK in 38ms (Views: 29.9ms | ActiveRecord: 1.1ms | Allocations: 2636)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:42:58 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 18671)
+Completed 200 OK in 70ms (Views: 58.8ms | ActiveRecord: 1.3ms | Allocations: 20050)
+
+
+Started GET "/" for ::1 at 2024-05-19 02:43:02 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tops/index.html.erb:2
+  Rendered tops/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1033)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 2475)
+Completed 200 OK in 45ms (Views: 35.9ms | ActiveRecord: 0.4ms | Allocations: 3021)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:43:04 +0900
+Processing by JournalsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journals_controller.rb:6:in `new'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mJournal Create (21.4ms)[0m  [1m[32mINSERT INTO "journals" ("content", "stamp", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", nil], ["stamp", nil], ["created_at", "2024-05-18 17:43:04.611309"], ["updated_at", "2024-05-18 17:43:04.611309"], ["user_id", 2]]
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/journals_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 1704)
+Completed 200 OK in 110ms (Views: 26.9ms | ActiveRecord: 35.4ms | Allocations: 6843)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:43:51 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 397)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 18835)
+Completed 200 OK in 71ms (Views: 60.4ms | ActiveRecord: 1.9ms | Allocations: 20214)
+
+
+Started GET "/" for ::1 at 2024-05-19 02:43:57 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tops/index.html.erb:2
+  Rendered tops/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1033)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 2490)
+Completed 200 OK in 43ms (Views: 33.7ms | ActiveRecord: 0.7ms | Allocations: 3037)
+
+
+Started GET "/journals/new" for ::1 at 2024-05-19 02:43:58 +0900
+Processing by JournalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/new.html.erb within layouts/application
+  Rendered journals/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 337)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 2434)
+Completed 200 OK in 35ms (Views: 27.0ms | ActiveRecord: 0.4ms | Allocations: 2721)
+
+
+Started POST "/journals" for ::1 at 2024-05-19 02:44:07 +0900
+Processing by JournalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"hello"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/journals_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/journals_controller.rb:10:in `create'
+  [1m[36mJournal Create (5.9ms)[0m  [1m[32mINSERT INTO "journals" ("content", "stamp", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "hello"], ["stamp", nil], ["created_at", "2024-05-18 17:44:07.820449"], ["updated_at", "2024-05-18 17:44:07.820449"], ["user_id", 2]]
+  ↳ app/controllers/journals_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/journals_controller.rb:10:in `create'
+Redirected to http://localhost:3000/journals
+Completed 302 Found in 67ms (ActiveRecord: 19.9ms | Allocations: 4992)
+
+
+Started GET "/journals" for ::1 at 2024-05-19 02:44:07 +0900
+Processing by JournalsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  Rendered journals/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 2304)
+Completed 200 OK in 39ms (Views: 29.3ms | ActiveRecord: 0.4ms | Allocations: 2632)
+
+

@@ -1,3 +1,9 @@
 <h1>日記一覧</h1>
-<p>ここに一覧を表示</p>
 <a href="/">トップページ</a>
+<% @journals.each do |journal| %>
+  <h3><%= journal.created_at.strftime('%Y.%-m.%d') %></h3>
+  <p><%= journal.content %></p>
+<% end %>
+
+
+
