@@ -2210,3 +2210,28 @@ Processing by JournalsController#index as TURBO_STREAM
 Completed 200 OK in 39ms (Views: 29.3ms | ActiveRecord: 0.4ms | Allocations: 2632)
 
 
+  [1m[36mJournal Load (0.5ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+Started GET "/journals" for ::1 at 2024-05-19 02:57:48 +0900
+Processing by JournalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering journals/index.html.erb within layouts/application
+  [1m[36mJournal Load (0.4ms)[0m  [1m[34mSELECT "journals".* FROM "journals"[0m
+  ↳ app/views/journals/index.html.erb:3
+  Rendered journals/index.html.erb within layouts/application (Duration: 40.7ms | Allocations: 2599)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 157.4ms | Allocations: 20874)
+Completed 200 OK in 207ms (Views: 177.7ms | ActiveRecord: 1.9ms | Allocations: 23004)
+
+
+Started GET "/" for ::1 at 2024-05-19 03:14:17 +0900
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tops/index.html.erb:2
+  Rendered tops/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1364)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 2806)
+Completed 200 OK in 65ms (Views: 50.0ms | ActiveRecord: 1.5ms | Allocations: 3491)
+
+

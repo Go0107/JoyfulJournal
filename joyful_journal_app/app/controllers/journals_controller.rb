@@ -1,6 +1,6 @@
 class JournalsController < ApplicationController
   def index
-    @journals = Journal.all
+    @journals = Journal.where(user_id: current_user)
   end
 
   def new
