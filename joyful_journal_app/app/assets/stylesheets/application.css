@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: -apple-system, "Roboto", "Noto Sans", "Noto Sans JP", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, Arial, Helvetica, sans-serif;
+  color: #444444;
+  /* background-color:; */
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 52px;
+  margin-top: 80px;
+}
+
+.button {
+  padding: 16px 24px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+/* header ================================ */
+header {
+  background-color: #CC3333;
+  padding: 18px 0;
+}

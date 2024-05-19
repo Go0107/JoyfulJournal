@@ -1,0 +1,17 @@
+.sign_container {
+  width: 30%;
+  margin: auto;
+}
+
+.sign_container h1 {
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field_box {
+  height: 20px;
+  width: 100%;
+}

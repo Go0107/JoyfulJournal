@@ -12,21 +12,16 @@
 
   <body>
     <header>
+      <a href="/" class="button top_page">JoyfulJournal</a>
       <% if current_user.present? %>
-        <a href="/journals">日記一覧</a>
-        <a href="/journals/new">日記投稿</a>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,data: { turbo_method: :delete } %>
+        <a href="/journals" class="button">日記一覧</a>
+        <a href="/journals/new" class="button">日記投稿</a>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'button'  %>
       <% else %>
-        <a href="/users/sign_in">ログイン</a>
-        <a href="/users/sign_up">新規登録</a>
+        <a href="/users/sign_in" class="button">ログイン</a>
+        <a href="/users/sign_up" class="button">新規登録</a>
       <% end %>
     </header>
-    <% if current_user.present? %>
-      <p>こんにちは、<%= current_user.name %>さん！</p>
-    <% else %>
-      <p>ログインされていません</p>
-    <% end %>
-    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
