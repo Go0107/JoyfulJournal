@@ -38,4 +38,4 @@ https://www.figma.com/design/pYyMoOUk6togTRpK8RdOpw/ワイヤーフレーム?nod
 |created_at|TIMESTAMP|CURRENT_TIMESTAMP|TRUE||
 |updated_at|TIMESTAMP|CURRENT_TIMESTAMP|TRUE||
 ## システム構成図
-(infrastructure.png)
+![システム構成図](infrastructure.png)
