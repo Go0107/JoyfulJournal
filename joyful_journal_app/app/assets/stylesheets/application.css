@@ -36,6 +36,15 @@ h1 {
   text-decoration: none;
 }
 
+.link {
+  color: #444444;
+  text-decoration: none;
+}
+
+.stamp_img {
+  height: 80px;
+}
+
 /* header ================================ */
 header {
   background-color: #CC3333;
