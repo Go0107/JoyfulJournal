@@ -3,7 +3,10 @@
   <div class="journals">
     <% @journals.each do |journal| %>
       <div class="one_journal">
-        <h3><%= journal.created_at.strftime('%-m/%d') %></h3>
+        <div class="upper_journal">
+          <h3><%= journal.created_at.strftime('%-m/%d') %></h3>
+          <img src=<%= "/assets/#{journal.stamp}.png" %>>
+        </div>
         <p><%= journal.content %></p>
       </div>
     <% end %>
