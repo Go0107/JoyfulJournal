@@ -36,6 +36,11 @@ h1 {
   text-decoration: none;
 }
 
+.link {
+  color: #444444;
+  text-decoration: none;
+}
+
 /* header ================================ */
 header {
   background-color: #CC3333;

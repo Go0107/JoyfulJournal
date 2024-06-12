@@ -8,7 +8,7 @@ textarea {
 }
 
 .journal_post {
-  text-align: right;
+  text-align: center;
   padding: 0;
 }
 
@@ -32,4 +32,12 @@ textarea {
 .one_journal {
   border-top: 3px dotted #aaa;
   padding: 24px;
+}
+
+.one_journal h3 {
+  font-size: 28px;
+}
+
+.journals {
+  margin-bottom: 200px;
 }

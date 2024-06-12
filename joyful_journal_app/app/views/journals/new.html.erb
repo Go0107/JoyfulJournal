@@ -1,7 +1,9 @@
 <div class="container">
   <div class="new_journal_wrapper">
-    <h1>本日の日記</h1>
     <%= form_tag("/journals") do %>
+      <div class="upper">
+        <h1>本日の日記</h1>
+      </div>
       <textarea name="content"></textarea>
       <div class="journal_post">
         <input type="submit" value="投稿する">
