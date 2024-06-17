@@ -3,6 +3,12 @@ class JournalsController < ApplicationController
     @journals = Journal.where(user_id: current_user).order(created_at: :desc)
   end
 
+  def chart
+    journals = Journal.where(user_id: current_user)
+    @happiness_data = journals.group_by { |journal| journal.created_at.to_date }
+                              .transform_values { |journals| journals.map(&:happiness_score).sum / journals.size.to_f }
+  end
+
   def new
     @journal = Journal.new
   end
@@ -24,4 +30,5 @@ class JournalsController < ApplicationController
   def show
     @journal = Journal.find_by(id: params[:id])
   end
+
 end

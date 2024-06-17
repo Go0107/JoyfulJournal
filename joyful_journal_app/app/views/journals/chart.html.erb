@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>幸福度グラフ</h1>
+  <canvas id="happinessChart" width="400" height="200"></canvas>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var ctx = document.getElementById('happinessChart').getContext('2d');
+      var happinessData = <%= @happiness_data.to_json.html_safe %>;
+
+      var labels = Object.keys(happinessData);
+      var data = Object.values(happinessData);
+
+      var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: '幸福度',
+            data: data,
+            borderColor: 'rgba(204, 51, 51, 0.8)',
+            backgroundColor: 'rgba(204, 51, 51, 0.1)',
+            fill: true,
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: '日付'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: '幸福度'
+              },
+              min: 0,
+              max: 5
+            }
+          }
+        }
+      });
+    });
+  </script>
+</div>
