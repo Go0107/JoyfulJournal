@@ -1,10 +1,12 @@
 class JournalsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @journals = Journal.where(user_id: current_user).order(created_at: :desc)
+    @journals = Journal.where(user_id: current_user.id).order(created_at: :desc)
   end
 
   def chart
-    journals = Journal.where(user_id: current_user)
+    journals = current_user.journals
     @happiness_data = journals.group_by { |journal| journal.created_at.to_date }
                               .transform_values { |journals| journals.map(&:happiness_score).sum / journals.size.to_f }
   end

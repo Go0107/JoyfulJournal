@@ -2,7 +2,7 @@
   <h1>幸福度グラフ</h1>
   <canvas id="happinessChart" width="400" height="200"></canvas>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    function renderHappinessChart() {
       var ctx = document.getElementById('happinessChart').getContext('2d');
       var happinessData = <%= @happiness_data.to_json.html_safe %>;
 
@@ -40,6 +40,9 @@
           }
         }
       });
-    });
+    }
+
+    document.addEventListener("DOMContentLoaded", renderHappinessChart);
+    document.addEventListener("turbo:load", renderHappinessChart);
   </script>
 </div>
