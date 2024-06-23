@@ -3,13 +3,13 @@
   <canvas id="happinessChart" width="400" height="200"></canvas>
   <script>
     function renderHappinessChart() {
-      var ctx = document.getElementById('happinessChart').getContext('2d');
-      var happinessData = <%= @happiness_data.to_json.html_safe %>;
+      let ctx = document.getElementById('happinessChart').getContext('2d');
+      let happinessData = <%= @happiness_data.to_json.html_safe %>;
 
-      var labels = Object.keys(happinessData);
-      var data = Object.values(happinessData);
+      let labels = Object.keys(happinessData);
+      let data = Object.values(happinessData);
 
-      var chart = new Chart(ctx, {
+      let chart = new Chart(ctx, {
         type: 'line',
         data: {
           labels: labels,
@@ -35,7 +35,7 @@
                 text: '幸福度'
               },
               min: 0,
-              max: 5
+              max: 6
             }
           }
         }
