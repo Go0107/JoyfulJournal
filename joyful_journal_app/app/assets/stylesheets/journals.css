@@ -98,8 +98,10 @@ input[type="radio"]:checked + label .selected-img {
 .delete-button {
   color: red;
   text-decoration: none;
+  float: right;
 }
 
 .delete-button:hover {
   text-decoration: underline;
 }
+

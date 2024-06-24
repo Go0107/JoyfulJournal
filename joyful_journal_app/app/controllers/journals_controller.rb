@@ -3,9 +3,27 @@ class JournalsController < ApplicationController
 
   def index
     @journals = Journal.where(user_id: current_user.id).order(created_at: :desc)
-    # キャラクターの処理を書く
-    # キャラクターの処理に使う用のデータを取ってくる（今日のデータ）
-    # if分で処理を描く
+    @happiness_data = @journals.group_by { |journal| journal.created_at.to_date }
+                               .transform_values { |journals| journals.map(&:happiness_score).sum / journals.size.to_f }
+
+    # キャラクターの状態を決定
+    today = Date.today
+    if @happiness_data.key?(today)
+      average_happiness = @happiness_data[today]
+      if average_happiness > 4
+        @character_expression = "fine"
+        @character_speech = "今日はとっても幸せだよ！"
+      elsif average_happiness > 2
+        @character_expression = "neutral"
+        @character_speech = "まあまあかな。"
+      else
+        @character_expression = "sad"
+        @character_speech = "今日はちょっと元気がないな…。"
+      end
+    else
+      @character_expression = "normal"
+      @character_speech = "日記を書いてね！"
+    end
   end
 
   def chart
@@ -42,5 +60,30 @@ class JournalsController < ApplicationController
     flash[:notice] = "削除しました"
     redirect_to journals_path
   end
+
+  # private
+
+  # def set_character_state
+  #   today_journals = current_user.journals.where(created_at: Time.zone.today.all_day)
+    
+  #   if today_journals.exists?
+  #     total_happiness = today_journals.sum(:happiness_score)
+  #     avg_happiness = total_happiness / today_journals.size.to_f
+
+  #     if avg_happiness > 4
+  #       @character_image = 'fine.png'
+  #       @character_message = '今日はとても幸せな一日だったね！'
+  #     elsif avg_happiness > 2
+  #       @character_image = 'neutral.png'
+  #       @character_message = '今日は普通の日だったね。'
+  #     else
+  #       @character_image = 'unhappy.png'
+  #       @character_message = '今日はあまり良い日ではなかったみたい。'
+  #     end
+  #   else
+  #     @character_image = 'depressed.png'
+  #     @character_message = '今日はまだ日記が書かれていないよ。'
+  #   end
+  # end
 
 end
