@@ -3,11 +3,14 @@ class JournalsController < ApplicationController
 
   def index
     @journals = Journal.where(user_id: current_user.id).order(created_at: :desc)
+    # キャラクターの処理を書く
+    # キャラクターの処理に使う用のデータを取ってくる（今日のデータ）
+    # if分で処理を描く
   end
 
   def chart
-    journals = current_user.journals
-    @happiness_data = journals.group_by { |journal| journal.created_at.to_date }
+    c_journals = current_user.journals
+    @happiness_data = c_journals.group_by { |journal| journal.created_at.to_date }
                               .transform_values { |journals| journals.map(&:happiness_score).sum / journals.size.to_f }
   end
 
