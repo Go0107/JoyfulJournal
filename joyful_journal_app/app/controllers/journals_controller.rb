@@ -36,4 +36,11 @@ class JournalsController < ApplicationController
     @journal = Journal.find_by(id: params[:id])
   end
 
+  def destroy
+    @journal = current_user.journals.find(params[:id])
+    @journal.destroy
+    flash[:notice] = "削除しました"
+    redirect_to journals_path
+  end
+
 end
