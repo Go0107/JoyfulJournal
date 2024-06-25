@@ -10,10 +10,10 @@ class JournalsController < ApplicationController
     today = Date.today
     if @happiness_data.key?(today)
       average_happiness = @happiness_data[today]
-      if average_happiness > 4
+      if average_happiness >= 4
         @character_expression = "fine"
         @character_speech = "今日はとっても幸せだよ！"
-      elsif average_happiness > 2
+      elsif average_happiness >= 2
         @character_expression = "neutral"
         @character_speech = "まあまあかな。"
       else
