@@ -8,16 +8,20 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <%= javascript_include_tag 'turbo', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <header>
-      <a href="/" class="button top_page">JoyfulJournal</a>
       <% if current_user.present? %>
+        <a href="" class="button top_page">JoyfulJournal</a>
         <a href="/journals" class="button">日記一覧</a>
         <a href="/journals/new" class="button">日記投稿</a>
+        <a href="/journals/chart" class="button">チャート</a>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'button'  %>
       <% else %>
+        <a href="/" class="button top_page">JoyfulJournal</a>
         <a href="/users/sign_in" class="button">ログイン</a>
         <a href="/users/sign_up" class="button">新規登録</a>
       <% end %>

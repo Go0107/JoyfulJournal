@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get "journals/chart" => "journals#chart"
   root 'tops#index'
   devise_for :users
   resources :journals
