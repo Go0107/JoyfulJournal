@@ -15,15 +15,15 @@
   <body>
     <header>
       <% if current_user.present? %>
-        <a href="" class="button top_page">JoyfulJournal</a>
-        <a href="/journals" class="button">日記一覧</a>
-        <a href="/journals/new" class="button">日記投稿</a>
-        <a href="/journals/chart" class="button">チャート</a>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'button'  %>
+        <a href="" class="button">JoyfulJournal</a>
+        <a href="/journals" class="button l">日記一覧</a>
+        <a href="/journals/new" class="button l">日記投稿</a>
+        <a href="/journals/chart" class="button l">チャート</a>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'button l'  %>
       <% else %>
-        <a href="/" class="button top_page">JoyfulJournal</a>
-        <a href="/users/sign_in" class="button">ログイン</a>
-        <a href="/users/sign_up" class="button">新規登録</a>
+        <a href="/" class="button top_page l">JoyfulJournal</a>
+        <a href="/users/sign_in" class="button l">ログイン</a>
+        <a href="/users/sign_up" class="button l">新規登録</a>
       <% end %>
     </header>
     <p class="alert"><%= alert %></p>
