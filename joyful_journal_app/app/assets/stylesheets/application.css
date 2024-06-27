@@ -64,7 +64,7 @@ header {
 }
 
 .character img {
-  width: 100px; /* キャラクター画像のサイズ */
+  width: 200px; /* キャラクター画像のサイズ */
   height: auto;
   margin-left: 10px;
 }

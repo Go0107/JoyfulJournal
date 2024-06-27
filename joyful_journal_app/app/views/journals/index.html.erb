@@ -27,17 +27,17 @@
       <p><%= @character_speech %></p>
     </div>
     <% if @character_expression == "fine" %>
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/fine3.png" alt="Fine Character">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/fine-character.png" alt="Fine Character">
     <% elsif @character_expression == "good" %>
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/good.png" alt="Good Character">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/good-character.png" alt="Good Character">
     <% elsif @character_expression == "neutral" %>
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/neutral.png" alt="Neutral Character">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/default-new.png" alt="Neutral Character">
     <% elsif @character_expression == "unhappy" %>
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/unhappy.png" alt="Unhappy Character">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/unhappy-character.png" alt="Unhappy Character">
     <% elsif @character_expression == "depressed" %>
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/depressed.png" alt="Depressed Character">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/depressed-character.png" alt="Depressed Character">
     <% else %>
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/good.png" alt="Normal Character">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/no-entry-character.png" alt="Normal Character">
     <% end %>
   </div>
 </div>
