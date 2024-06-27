@@ -51,19 +51,44 @@ header {
   padding: 18px 0;
 }
 
+.l:hover {
+  background-color: #c32828;
+}
+
 /* character ================================ */
 .character {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  text-align: right;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
 }
 
 .character img {
-  width: 100px;
+  width: 200px; /* キャラクター画像のサイズ */
   height: auto;
+  margin-left: 10px;
 }
 
-.character p {
-  margin-top: 5px;
+.character .speech-bubble {
+  position: absolute;
+  top: 50%;
+  left: -170px; /* 吹き出しの位置調整 */
+  transform: translateY(-50%);
+  background: #FFCCCC; /* 吹き出しの背景色を変更 */
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.character .speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%; /* 吹き出しの先端の位置調整 */
+  transform: translateY(-50%);
+  border-width: 10px 0 10px 20px;
+  border-style: solid;
+  border-color: transparent transparent transparent #FFCCCC; /* 吹き出しの背景色に合わせる */
 }
