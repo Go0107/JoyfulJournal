@@ -1,0 +1,377 @@
+/* journals/new ================================ */
+textarea {
+  width: 100%;
+  height: 300px;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 3px solid #555555;
+  border-radius: 5px;
+}
+
+.journal_post {
+  text-align: center;
+  padding: 0;
+}
+
+/* .journal_post input {
+  background-color: #CC3333;
+  color: white;
+  padding: 16px 32px;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 33.5px;
+  border: none;
+  border-radius: 3px;
+} */
+
+.journal_post input {
+  background-color: #ff4d4d; /* 明るい赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  margin-top: 33.5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal_post input:hover {
+  background-color: #ff6666;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.journal_post input:active {
+  background-color: #cc3333;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* .upper {
+  float: left;
+} */
+
+.upper h1 {
+  margin-bottom: 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* デフォルトの画像を表示 */
+.radio-label img.selected-img {
+  display: none;
+}
+
+/* ラジオボタンが選択されたときに画像を切り替える */
+input[type="radio"]:checked + label .default-img {
+  display: none;
+}
+
+input[type="radio"]:checked + label .selected-img {
+  display: inline;
+}
+
+/* ラベルのスタイル */
+.radio-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.radio-label img {
+  width: 75px; /* 画像のサイズを適宜調整 */
+}
+
+.radio-group {
+  float: left;
+  margin-bottom: 12px;
+}
+
+/* .new_journal_wrapper {
+  padding-top: 20px;
+} */
+
+/* journals/index ================================ */
+.one_journal {
+  border-top: 3px dotted #aaa;
+  padding: 24px;
+}
+
+.one_journal h3 {
+  font-size: 28px;
+  margin-right: 4px;
+}
+
+.one_journal img {
+  height: 60px;
+}
+
+.journals {
+  margin-bottom: 200px;
+}
+
+.upper_journal {
+  display: flex;
+  align-items: center; /* 中央揃え */
+}
+
+.right-align {
+  margin-left: auto;
+}
+
+/* .delete-button {
+  color: red;
+  text-decoration: none;
+  float: right;
+}
+
+.delete-button:hover {
+  text-decoration: underline;
+} */
+
+.delete-button {
+  background-color: #e60000; /* 濃い赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.delete-button:active {
+  background-color: #b30000;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.sign_container {
+  width: 30%;
+  margin: auto;
+}
+
+.sign_container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field_box {
+  height: 20px;
+  width: 100%;
+}
+
+/* .link_button {
+  padding: 16px 24px;
+  width: 48%;
+  color: white;
+  background-color: #CC3333;
+  border: none;
+  border-radius: 3px; 
+} */
+
+.link_button {
+  width: 48%;
+  background-color: #ff4d4d; /* 明るい赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link_button:hover {
+  background-color: #ff6666;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.link_button:active {
+  background-color: #cc3333;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actions {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.login {
+  margin-top: 20px;
+}
+.title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.explain_documents {
+  opacity: 0.8;
+}
+
+.top_signs {
+  display: flex;
+  margin: 32px 0 100px 0;
+  background-color: f5f5f5;
+}
+
+.top_sign {
+  flex-grow: 1;
+  text-align: center;
+  padding: 40px 0 60px 0;
+}
+
+/* .top_sign a {
+  padding: 16px 24px;
+  width: 24%;
+  color: white;
+  background-color: #CC3333;
+  border: none;
+  border-radius: 3px;
+  display: inline-block; 
+} */
+
+.top_sign a {
+  display: inline-block;
+  width: 24%;
+  background-color: #ff4d4d; /* 明るい赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top_sign a:hover {
+  background-color: #ff6666;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.top_sign a:active {
+  background-color: #cc3333;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top_sign h2 {
+  margin-bottom: 20px;
+}
+
+.top_session {
+  border-right: 3px dotted #aaa;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+ body {
+  font-family: -apple-system, "Roboto", "Noto Sans", "Noto Sans JP", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, Arial, Helvetica, sans-serif;
+  color: #444444;
+  /* background-color:; */
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 52px;
+  margin-top: 80px;
+}
+
+.button {
+  padding: 16px 24px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  color: #444444;
+  text-decoration: none;
+}
+
+.stamp_img {
+  height: 80px;
+}
+
+/* header ================================ */
+header {
+  background-color: #CC3333;
+  padding: 18px 0;
+}
+
+.l:hover {
+  background-color: #c32828;
+}
+
+/* character ================================ */
+.character {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.character img {
+  width: 200px; /* キャラクター画像のサイズ */
+  height: auto;
+  margin-left: 10px;
+}
+
+.character .speech-bubble {
+  position: absolute;
+  top: 50%;
+  left: -170px; /* 吹き出しの位置調整 */
+  transform: translateY(-50%);
+  background: #FFCCCC; /* 吹き出しの背景色を変更 */
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.character .speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%; /* 吹き出しの先端の位置調整 */
+  transform: translateY(-50%);
+  border-width: 10px 0 10px 20px;
+  border-style: solid;
+  border-color: transparent transparent transparent #FFCCCC; /* 吹き出しの背景色に合わせる */
+}

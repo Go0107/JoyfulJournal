@@ -1,0 +1,61 @@
+.sign_container {
+  width: 30%;
+  margin: auto;
+}
+
+.sign_container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field_box {
+  height: 20px;
+  width: 100%;
+}
+
+/* .link_button {
+  padding: 16px 24px;
+  width: 48%;
+  color: white;
+  background-color: #CC3333;
+  border: none;
+  border-radius: 3px; 
+} */
+
+.link_button {
+  width: 48%;
+  background-color: #ff4d4d; /* 明るい赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link_button:hover {
+  background-color: #ff6666;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.link_button:active {
+  background-color: #cc3333;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actions {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.login {
+  margin-top: 20px;
+}
