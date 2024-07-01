@@ -14,7 +14,7 @@ textarea {
   padding: 0;
 }
 
-.journal_post input {
+/* .journal_post input {
   background-color: #CC3333;
   color: white;
   padding: 16px 32px;
@@ -23,7 +23,31 @@ textarea {
   margin-top: 33.5px;
   border: none;
   border-radius: 3px;
+} */
 
+.journal_post input {
+  background-color: #ff4d4d; /* 明るい赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  margin-top: 33.5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal_post input:hover {
+  background-color: #ff6666;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.journal_post input:active {
+  background-color: #cc3333;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* .upper {
@@ -95,7 +119,11 @@ input[type="radio"]:checked + label .selected-img {
   align-items: center; /* 中央揃え */
 }
 
-.delete-button {
+.right-align {
+  margin-left: auto;
+}
+
+/* .delete-button {
   color: red;
   text-decoration: none;
   float: right;
@@ -103,5 +131,28 @@ input[type="radio"]:checked + label .selected-img {
 
 .delete-button:hover {
   text-decoration: underline;
+} */
+
+.delete-button {
+  background-color: #e60000; /* 濃い赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.delete-button:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.delete-button:active {
+  background-color: #b30000;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

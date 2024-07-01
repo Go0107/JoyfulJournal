@@ -19,7 +19,7 @@
   padding: 40px 0 60px 0;
 }
 
-.top_sign a {
+/* .top_sign a {
   padding: 16px 24px;
   width: 24%;
   color: white;
@@ -27,6 +27,32 @@
   border: none;
   border-radius: 3px;
   display: inline-block; 
+} */
+
+.top_sign a {
+  display: inline-block;
+  width: 24%;
+  background-color: #ff4d4d; /* 明るい赤色 */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top_sign a:hover {
+  background-color: #ff6666;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.top_sign a:active {
+  background-color: #cc3333;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .top_sign h2 {
