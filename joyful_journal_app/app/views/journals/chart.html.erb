@@ -1,6 +1,15 @@
 <div class="container">
   <h1>幸福度グラフ</h1>
-  <canvas id="happinessChart" width="400" height="200"></canvas>
+  <div class="chart-container">
+    <canvas id="happinessChart" width="400" height="200"></canvas>
+    <div class="y-axis-labels">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/depressed.png" alt="Depressed" class="depressed">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/unhappy.png" alt="Unhappy" class="unhappy">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/neutral.png" alt="Neutral" class="neutral">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/good.png" alt="Good" class="good">
+      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/fine3.png" alt="Fine" class="fine">
+    </div>
+  </div>
   <script>
     function renderHappinessChart() {
       let ctx = document.getElementById('happinessChart').getContext('2d');
@@ -31,11 +40,17 @@
             },
             y: {
               title: {
-                display: true,
+                display: false,
                 text: '幸福度'
               },
               min: 0,
-              max: 6
+              max: 6,
+              ticks: {
+                stepSize: 1,
+                callback: function(value) {
+                  return '';
+                }
+              }
             }
           }
         }
@@ -46,3 +61,4 @@
     document.addEventListener("turbo:load", renderHappinessChart);
   </script>
 </div>
+

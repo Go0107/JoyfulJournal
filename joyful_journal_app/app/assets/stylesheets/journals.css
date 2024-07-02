@@ -156,3 +156,35 @@ input[type="radio"]:checked + label .selected-img {
   transform: translateY(0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* chart */
+
+.chart-container {
+  position: relative;
+}
+
+.y-axis-labels img {
+  position: absolute;
+  left: -40px;
+  width: 60px;
+}
+
+.y-axis-labels .depressed {
+  top: 71%;
+}
+
+.y-axis-labels .unhappy {
+  top: 57%;
+}
+
+.y-axis-labels .neutral {
+  top: 43%;
+}
+
+.y-axis-labels .good {
+  top: 29%;
+}
+
+.y-axis-labels .fine {
+  top: 15%;
+}
