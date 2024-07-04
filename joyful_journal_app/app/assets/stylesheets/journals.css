@@ -188,3 +188,25 @@ input[type="radio"]:checked + label .selected-img {
 .y-axis-labels .fine {
   top: 15%;
 }
+
+@media (max-width: 1200px) {
+  .y-axis-labels .depressed {
+    top: 75%;
+  }
+  
+  .y-axis-labels .unhappy {
+    top: 60%;
+  }
+  
+  .y-axis-labels .neutral {
+    top: 45%;
+  }
+  
+  .y-axis-labels .good {
+    top: 30%;
+  }
+  
+  .y-axis-labels .fine {
+    top: 15%;
+  }
+}
