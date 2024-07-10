@@ -1,64 +1,61 @@
-<div class="container">
-  <h1>幸福度グラフ</h1>
-  <div class="chart-container">
-    <canvas id="happinessChart" width="400" height="200"></canvas>
-    <div class="y-axis-labels">
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/depressed.png" alt="Depressed" class="depressed">
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/unhappy.png" alt="Unhappy" class="unhappy">
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/neutral.png" alt="Neutral" class="neutral">
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/good.png" alt="Good" class="good">
-      <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/fine3.png" alt="Fine" class="fine">
-    </div>
+<h1>幸福度グラフ</h1>
+<div class="chart-container">
+  <canvas id="happinessChart" width="400" height="200"></canvas>
+  <div class="y-axis-labels">
+    <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/depressed.png" alt="Depressed" class="depressed">
+    <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/unhappy.png" alt="Unhappy" class="unhappy">
+    <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/neutral.png" alt="Neutral" class="neutral">
+    <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/good.png" alt="Good" class="good">
+    <img src="https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/fine3.png" alt="Fine" class="fine">
   </div>
-  <script>
-    function renderHappinessChart() {
-      let ctx = document.getElementById('happinessChart').getContext('2d');
-      let happinessData = <%= @happiness_data.to_json.html_safe %>;
+</div>
+<script>
+  function renderHappinessChart() {
+    let ctx = document.getElementById('happinessChart').getContext('2d');
+    let happinessData = <%= @happiness_data.to_json.html_safe %>;
 
-      let labels = Object.keys(happinessData);
-      let data = Object.values(happinessData);
+    let labels = Object.keys(happinessData);
+    let data = Object.values(happinessData);
 
-      let chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: labels,
-          datasets: [{
-            label: '幸福度',
-            data: data,
-            borderColor: 'rgba(204, 51, 51, 0.8)',
-            backgroundColor: 'rgba(204, 51, 51, 0.1)',
-            fill: true,
-          }]
-        },
-        options: {
-          scales: {
-            x: {
-              title: {
-                display: true,
-                text: '日付'
-              }
+    let chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: '幸福度',
+          data: data,
+          borderColor: 'rgba(204, 51, 51, 0.8)',
+          backgroundColor: 'rgba(204, 51, 51, 0.1)',
+          fill: true,
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: '日付'
+            }
+          },
+          y: {
+            title: {
+              display: false,
+              text: '幸福度'
             },
-            y: {
-              title: {
-                display: false,
-                text: '幸福度'
-              },
-              min: 0,
-              max: 6,
-              ticks: {
-                stepSize: 1,
-                callback: function(value) {
-                  return '';
-                }
+            min: 0,
+            max: 6,
+            ticks: {
+              stepSize: 1,
+              callback: function(value) {
+                return '';
               }
             }
           }
         }
-      });
-    }
+      }
+    });
+  }
 
-    document.addEventListener("DOMContentLoaded", renderHappinessChart);
-    document.addEventListener("turbo:load", renderHappinessChart);
-  </script>
-</div>
-
+  document.addEventListener("DOMContentLoaded", renderHappinessChart);
+  document.addEventListener("turbo:load", renderHappinessChart);
+</script>

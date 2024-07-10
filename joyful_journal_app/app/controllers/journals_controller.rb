@@ -87,9 +87,10 @@ class JournalsController < ApplicationController
     )
     if @journal.save
       flash[:notice] = "投稿を作成しました"
-      redirect_to("/journals")
+      redirect_to journals_path
     else
-      render("/journals/new")
+      flash[:alert] = "投稿を失敗しました"
+      redirect_to action: :new
     end
   end
 

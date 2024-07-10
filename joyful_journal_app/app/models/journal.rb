@@ -1,4 +1,5 @@
 class Journal < ApplicationRecord
+  validates :stamp, presence: true
   belongs_to :user
 
   def happiness_score
