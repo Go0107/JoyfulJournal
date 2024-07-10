@@ -101,7 +101,7 @@ class JournalsController < ApplicationController
   def destroy
     @journal = current_user.journals.find(params[:id])
     @journal.destroy
-    flash[:notice] = "削除しました"
+    flash[:notice] = "日記を削除しました"
     redirect_to journals_path
   end
 
