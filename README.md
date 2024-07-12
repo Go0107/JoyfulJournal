@@ -1,5 +1,5 @@
 # JoyfulJournal
-『JoyfulJournal』は日記を三日坊主してしまう人のための日記アプリです。
+『JoyfulJournal』は日記を書きたいが三日坊主してしまう人のための日記アプリです。
 #### サービスURL
 https://joyfuljournal.online/
 ## トップページ
@@ -25,6 +25,7 @@ https://joyfuljournal.online/
   * Nginx
   * Unicorn
 ## ER図
+![ER図](./documents/er.png)
 ## インフラ構成図
 ![インフラ構成図](./documents/infrastructure.png)
 ## 工夫した点
