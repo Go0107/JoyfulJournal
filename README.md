@@ -16,7 +16,7 @@
   * Unicorn
 ## ER図
 ## インフラ構成図
-![システム構成図](infrastructure.png)
+![インフラ構成図](../documents/infrastructure.png)
 ## 工夫した点
 * 使いやすく、シンプルなインターフェイス。
 * ログイン後に当日の日記投稿の精査によって遷移画面が変わる仕組み。
