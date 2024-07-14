@@ -11,6 +11,7 @@ https://joyfuljournal.online/
 ![幸福度グラフ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E5%B9%B8%E7%A6%8F%E5%BA%A6%E3%82%B0%E3%83%A9%E3%83%95.png)
 #### キャラクター
 |日記未投稿|元気スタンプ投稿|憂鬱スタンプ投稿|
+|---|---|---|
 |![noentry](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/sample-noentry-character.png)|![fine](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/sample-fine-character.png)|![depressed](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/sample-depressed-character.png)|
 ## 機能一覧
 * 新規登録、ログイン機能
