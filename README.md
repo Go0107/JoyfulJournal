@@ -9,7 +9,7 @@ https://joyfuljournal.online/
 
 |日記一覧|幸福度グラフ|
 |---|---|
-|![日記一覧](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E4%B8%80%E8%A6%A7.png)|![幸福度グラフ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com%E5%B9%B8%E7%A6%8F%E5%BA%A6%E3%82%B0%E3%83%A9%E3%83%95%EF%BC%92.png)|
+|![日記一覧](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E4%B8%80%E8%A6%A7.png)|![幸福度グラフ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E5%B9%B8%E7%A6%8F%E5%BA%A6%E3%82%B0%E3%83%A9%E3%83%95%EF%BC%92.png)|
 #### キャラクター
 |日記未投稿|元気スタンプ投稿|憂鬱スタンプ投稿|
 |---|---|---|
