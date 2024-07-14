@@ -2,8 +2,18 @@
 日記アプリ『JoyfulJournal』は、自分の感情を見える化し、幸福度を管理するためのパーソナル日記アプリです。日々の感情を記録し、自己認識を深めるための実践的なツールを提供します。あなたの心の状態を視覚的に把握し、より良い生活を送るための手助けをします。
 #### サービスURL
 https://joyfuljournal.online/
-## トップページ
+## アプリイメージ
+#### トップページ
 ![トップページ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2024-07-13+030318.png)
+#### ログイン後機能
+![日記投稿](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E6%8A%95%E7%A8%BF.png)
+![日記一覧](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E4%B8%80%E8%A6%A7.png)
+![幸福度グラフ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E5%B9%B8%E7%A6%8F%E5%BA%A6%E3%82%B0%E3%83%A9%E3%83%95.png)
+#### キャラクター
+![noentry](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/sample-noentry-character.png)
+![fine](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/sample-fine-character.png)
+![depressed](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/sample-depressed-character.png)
+
 ## 機能一覧
 * 新規登録、ログイン機能
 * ログアウト機能
