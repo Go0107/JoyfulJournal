@@ -18,15 +18,21 @@
   <body>
     <header>
       <% if current_user.present? %>
-        <a href="" class="button">JoyfulJournal</a>
-        <a href="/journals" class="button l">日記一覧</a>
-        <a href="/journals/new" class="button l">日記投稿</a>
-        <a href="/journals/chart" class="button l">幸福度グラフ</a>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'button l'  %>
+        <div class="header-left">
+          <a href="" class="button">JoyfulJournal</a>
+          <a href="/journals" class="button l">日記一覧</a>
+          <a href="/journals/new" class="button l">日記投稿</a>
+          <a href="/journals/chart" class="button l">幸福度グラフ</a>
+        </div>
+        <div class="header-right">
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'button l logout' %>
+        </div>
       <% else %>
-        <a href="/" class="button top_page l">JoyfulJournal</a>
-        <a href="/users/sign_in" class="button l">ログイン</a>
-        <a href="/users/sign_up" class="button l">新規登録</a>
+        <div class="header-left">
+          <a href="/" class="button top_page l">JoyfulJournal</a>
+          <a href="/users/sign_in" class="button l">ログイン</a>
+          <a href="/users/sign_up" class="button l">新規登録</a>
+        </div>
       <% end %>
     </header>
     <div class="container">
