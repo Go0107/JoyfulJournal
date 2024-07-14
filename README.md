@@ -3,12 +3,13 @@
 #### サービスURL
 https://joyfuljournal.online/
 ## アプリイメージ
-#### トップページ
-![トップページ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2024-07-13+030318.png)
-#### ログイン後機能
-![日記投稿](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E6%8A%95%E7%A8%BF.png)
-![日記一覧](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E4%B8%80%E8%A6%A7.png)
-![幸福度グラフ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E5%B9%B8%E7%A6%8F%E5%BA%A6%E3%82%B0%E3%83%A9%E3%83%95.png)
+|トップページ|日記投稿|
+|---|---|
+|![トップページ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2024-07-13+030318.png)|![日記投稿](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E6%8A%95%E7%A8%BF.png)|
+
+|日記一覧|幸福度グラフ|
+|---|---|
+|![日記一覧](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E6%97%A5%E8%A8%98%E4%B8%80%E8%A6%A7.png)|![幸福度グラフ](https://joyfuljournal-bucket.s3.ap-northeast-1.amazonaws.com/%E5%B9%B8%E7%A6%8F%E5%BA%A6%E3%82%B0%E3%83%A9%E3%83%95.png)|
 #### キャラクター
 |日記未投稿|元気スタンプ投稿|憂鬱スタンプ投稿|
 |---|---|---|
